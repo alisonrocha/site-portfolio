@@ -1,0 +1,436 @@
+/* ===== RESET ====== */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== VARIABLES ====== */
+
+:root {
+  /* Color */
+  --body-color: #282a36;
+  --orange: #ff8a00;
+  --white: #ffffff;
+  --green: #3ffa7b;
+  --purple: #bd93ed;
+  --blue: #19253b;
+
+  /* Fonts */
+  --font-inconsolata: 'Inconsolata', sans-serif;
+
+  /* 1rem = 16px (User Agent) = 100% (User Agent) */
+  font-size: 62.5%; /* 10px */
+}
+
+/* ===== BASE ====== */
+body {
+  background-color: var(--body-color);
+}
+body,
+button {
+  /*intervalo de tamanho. O menor tamanho de tela vai chegar a 14px. O padrão é 1.6rem e para maior altura de tela 2vw - Boa prática */
+  font-size: clamp(14px, 1.6rem, 2vw);
+
+  font-family: var(--font-inconsolata);
+}
+
+.container {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+ul li {
+  display: inline-block;
+}
+
+button {
+  background: var(--orange);
+  padding: 1rem 3rem;
+  color: white;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff8a00a1;
+  cursor: pointer;
+}
+
+.title {
+  color: var(--green);
+  font-size: 3rem;
+}
+
+.section {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.content {
+  margin-top: 2rem;
+  padding: 2rem;
+
+  background: var(--blue);
+  border-radius: 0.4rem;
+
+  text-align: left;
+  color: var(--orange);
+}
+
+.ball {
+  background: white;
+
+  width: 1rem;
+  height: 1rem;
+
+  border-radius: 1rem;
+}
+
+.ball:nth-child(1) {
+  background: #fe6056;
+}
+
+.ball:nth-child(2) {
+  background: #febd2b;
+}
+
+.ball:nth-child(3) {
+  background: #24c93d;
+}
+
+/* ===== HEADER ====== */
+header {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .icon-menu {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.icon-github,
+.icon-linkedin-square,
+.icon-mail {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+header .menu {
+  visibility: hidden;
+  position: fixed;
+}
+
+header .menu.show {
+  visibility: visible;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: var(--blue);
+  height: 100vh;
+}
+
+header .menu ul {
+  margin-top: 7rem;
+  display: grid;
+  justify-content: center;
+  gap: 4rem;
+}
+
+header .menu ul li a {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--green);
+  transition: 0.3s;
+}
+
+header .menu ul a:hover,
+header span:hover {
+  cursor: pointer;
+  color: rgb(158, 172, 152);
+}
+
+header .menu .close {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  float: right;
+  padding: 2rem 2rem 0 0;
+}
+
+/* ===== SECTION PRESENTATION ====== */
+#section-presentation {
+  color: white;
+}
+
+#section-presentation .text-primary {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+#section-presentation .text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#section-presentation .text span {
+  color: var(--orange);
+}
+
+#section-presentation button {
+  margin-top: 2rem;
+}
+
+#section-presentation img {
+  width: 25rem;
+}
+/* ===== SECTION ABOUT ====== */
+
+#section-about .text-about {
+  margin: 1rem 0;
+  text-align: initial;
+}
+
+/* ===== KNOWLEDGE ====== */
+
+#section-knowledge ul {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1%;
+  grid-row-gap: 2%;
+  grid-template-columns: 49% 49%;
+}
+
+#section-knowledge li {
+  border-radius: 1rem;
+  padding: 3rem;
+  background: var(--blue);
+  transition: transform 0.3s;
+}
+
+#section-knowledge li:hover {
+  transform: scale(1.1);
+}
+
+#section-knowledge li span {
+  color: var(--purple);
+  font-size: 4rem;
+}
+
+#section-knowledge .text-finish {
+  margin-top: 4rem;
+  color: var(--orange);
+}
+
+/* ===== PROJECTS ====== */
+#section-projects .card-projects {
+  width: 26rem;
+
+  padding: 3rem;
+
+  background: var(--blue);
+  border-radius: 0.5rem;
+}
+
+#section-projects .title-projects {
+  color: var(--orange);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#section-projects p {
+  color: var(--white);
+
+  padding-top: 2rem;
+}
+
+#section-projects ul {
+  margin: 1.5rem;
+}
+
+#section-projects ul li {
+  color: white;
+}
+
+#section-projects button {
+  width: 20rem;
+
+  margin: 0.7rem 0;
+
+  color: white;
+}
+
+/* ===== CONTACT ====== */
+#section-contact .text-contact {
+  margin: 1.5rem 0;
+
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#section-contact .social-media {
+  display: flex;
+  justify-content: space-between;
+}
+
+#section-contact .social-media span {
+  transition: 0.3s;
+}
+
+#section-contact .social-media span:hover {
+  opacity: 0.3;
+
+  cursor: pointer;
+}
+
+/* ===== FOOTER ====== */
+
+footer {
+  margin: 4rem auto;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .text {
+    font-size: 1.9rem;
+  }
+
+  .title {
+    margin-top: 10rem;
+    font-size: 5rem;
+  }
+
+  .content {
+    padding: 2rem 3rem;
+  }
+
+  /* ===== HEADER ====== */
+  header {
+    padding: 3rem 0;
+  }
+
+  header .icon-menu,
+  header .menu .close {
+    display: none;
+  }
+
+  header .menu {
+    visibility: visible;
+    position: unset;
+  }
+
+  header .menu ul {
+    display: flex;
+    gap: 6rem;
+    margin: 0;
+  }
+
+  header .menu ul li a {
+    font-size: 1.7rem;
+  }
+
+  header .social-media ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  /* ===== PRESENTATION ====== */
+
+  #section-presentation {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    grid-column-gap: 9rem;
+  }
+
+  #section-presentation .text-primary {
+    font-size: 9rem;
+  }
+
+  #section-presentation .text span {
+    color: var(--orange);
+  }
+
+  #section-presentation img {
+    width: 45rem;
+  }
+
+  #section-about.section {
+    text-align: left;
+  }
+
+  #section-knowledge ul {
+    margin-top: 3rem;
+    grid-template-columns: 18% 18% 18% 18%;
+    justify-content: center;
+    grid-row-gap: 4%;
+  }
+
+  #section-knowledge li {
+    height: 15rem;
+    display: grid;
+    align-content: center;
+  }
+
+  #section-knowledge li span {
+    font-size: 6rem;
+  }
+
+  #section-knowledge .text-finish {
+    padding-top: 5rem;
+    color: var(--orange);
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  #section-projects .cards {
+    margin-top: 4rem;
+    grid-template-columns: 30% 30% 30%;
+    display: grid;
+    gap: 2%;
+    justify-content: center;
+  }
+
+  #section-projects .card-projects {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  #section-projects button {
+    width: 25rem;
+  }
+
+  #section-contact .text-contact {
+    font-size: 2.8rem;
+  }
+
+  #section-contact .social-media {
+    margin: 4rem 0 2rem 0;
+  }
+
+  #section-contact .icon-github,
+  #section-contact .icon-linkedin-square,
+  #section-contact .icon-mail {
+    font-size: 4rem;
+  }
+}
