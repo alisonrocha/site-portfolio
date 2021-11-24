@@ -240,6 +240,10 @@ header .menu .close {
   font-size: 4rem;
 }
 
+#section-knowledge .text {
+  padding: 3rem 0;
+}
+
 #section-knowledge .text-finish {
   margin-top: 4rem;
   color: var(--orange);
@@ -262,6 +266,8 @@ header .menu .close {
 }
 
 #section-projects p {
+  height: 12rem;
+
   color: var(--white);
 
   padding-top: 2rem;
@@ -274,8 +280,6 @@ header .menu .close {
 #section-projects ul li {
   color: white;
 }
-
-
 
 #section-projects .btn {
   display: inline-block;
@@ -435,11 +439,12 @@ footer {
   }
 
   #section-contact .text-contact {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
+    padding: 3rem 0;
   }
 
   #section-contact .social-media {
-    margin: 4rem 0 2rem 0;
+    margin: 0rem 0 3rem 0;
   }
 
   #section-contact .icon-github,
