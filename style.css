@@ -287,9 +287,9 @@ header .menu .close {
 #section-projects .cards {
   display: grid;
   gap: 1rem;
+  justify-content: center;
 }
 #section-projects .card-projects {
-  width: 26rem;
 
   padding: 3rem;
 
@@ -321,7 +321,7 @@ header .menu .close {
 
 #section-projects .btn {
   display: inline-block;
-  width: 20rem;
+  width: 25rem;
 
   margin: 0.7rem 0;
 
