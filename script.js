@@ -12,6 +12,17 @@ scrollReveal.reveal(
   { interval: 100 }
 )
 
+//Botão voltar para o topo
+function backToTop() {
+  let backToTopbutton = document.querySelector('.back-to-top')
+
+  if (window.scrollY >= 200) {
+    backToTopbutton.classList.add('show')
+  } else {
+    backToTopbutton.classList.remove('show')
+  }
+}
+
 const Menu = {
   openMenu: document.querySelector('.icon-menu'),
 
@@ -49,3 +60,7 @@ const App = {
 }
 
 App.init()
+
+window.addEventListener('scroll', function () {
+  backToTop()
+})
