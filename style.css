@@ -69,6 +69,7 @@ button:hover,
 .title {
   color: var(--green);
   font-size: 3rem;
+  padding-bottom: 2rem;
 }
 
 .section {
@@ -163,6 +164,7 @@ header .menu {
 }
 
 header .menu.show {
+  z-index: 1;
   visibility: visible;
   position: fixed;
   right: 0;
@@ -224,7 +226,7 @@ header .menu .close {
 }
 
 #section-presentation .btn {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
 }
 
 #section-presentation .btn:hover {
@@ -240,6 +242,10 @@ header .menu .close {
 #section-about .text-about {
   margin: 1rem 0;
   text-align: initial;
+}
+
+#section-about .text {
+  padding: 2rem 0;
 }
 
 /* ===== KNOWLEDGE ====== */
@@ -278,6 +284,10 @@ header .menu .close {
 }
 
 /* ===== PROJECTS ====== */
+#section-projects .cards {
+  display: grid;
+  gap: 1rem;
+}
 #section-projects .card-projects {
   width: 26rem;
 
@@ -311,7 +321,7 @@ header .menu .close {
 
 #section-projects .btn {
   display: inline-block;
-  width: 24rem;
+  width: 20rem;
 
   margin: 0.7rem 0;
 
@@ -425,10 +435,6 @@ footer {
     text-align: left;
   }
 
-  #section-about .text{
-    padding: 2rem 0;
-  }
-
   #section-knowledge ul {
     margin-top: 3rem;
     grid-template-columns: 18% 18% 18% 18%;
@@ -466,7 +472,7 @@ footer {
     width: auto;
   }
 
-  #section-projects button {
+  #section-projects .btn {
     width: 25rem;
   }
 
