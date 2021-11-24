@@ -27,27 +27,27 @@
 
 .icon-react:before {
   content: "\e925";
-  color: #61dafb;
+  
 }
 .icon-css3:before {
   content: "\e922";
-  color: #1572b6;
+  
 }
 .icon-typescript:before {
   content: "\e91d";
-  color: #007acc;
+  
 }
 .icon-figma:before {
   content: "\e91e";
-  color: #f24e1e;
+ 
 }
 .icon-javascript:before {
   content: "\e91f";
-  color: #f7df1e;
+  
 }
 .icon-bootstrap:before {
   content: "\e920";
-  color: #563d7c;
+  
 }
 .icon-linkedin:before {
   content: "\e924";
